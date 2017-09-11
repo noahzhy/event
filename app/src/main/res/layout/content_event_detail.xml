@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_event_detail"
+    tools:context="com.campuslife.event.EventDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/event_detail_photos_rv"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="2dp"
+            android:padding="2dp"
+            android:layout_marginBottom="2dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <ImageView
+            android:id="@+id/divider0"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@+id/event_detail_photos_rv"
+            android:background="@android:drawable/divider_horizontal_bright"/>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/divider0"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_access_time_grey_500_24dp"/>
+
+        <Switch
+            android:id="@+id/switch_event_all_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自动匹配照片    "
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_alignBottom="@+id/imageView2"
+            android:layout_alignTop="@+id/imageView2"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/switch_event_all_day"
+            android:background="@android:color/transparent"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="72dp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="right|center_vertical"
+            android:textSize="16sp"
+            android:layout_below="@+id/imageView2"
+            android:layout_alignParentEnd="true"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"/>
+
+        <TextView
+            android:id="@+id/tv_date2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tv_date"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="72dp"/>
+
+        <TextView
+            android:id="@+id/tv_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tv_time"
+            android:gravity="right|center_vertical"
+            android:background="@android:color/transparent"
+            android:textSize="16sp"
+            android:layout_alignParentEnd="true"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"/>
+
+        <ImageView
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@+id/tv_date2"
+            android:layout_marginTop="12dp"
+            android:background="@android:drawable/divider_horizontal_bright"/>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/divider1"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_place_grey_500_24dp"/>
+
+        <TextView
+            android:id="@+id/event_add_add"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text=""
+            android:layout_below="@+id/divider1"
+            android:layout_marginRight="16dp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="72dp"/>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

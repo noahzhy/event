@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_content_cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:title="活动"
+            app:navigationIcon="@drawable/ic_close_white_24dp"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+        <EditText
+            android:id="@+id/event_add_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:textCursorDrawable="@android:color/white"
+            android:hint="输入标题"
+            android:textColorHint="#60ffffff"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:padding="16dp"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/event_rv_loader"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:paddingTop="2dp"
+                android:paddingLeft="-2dp"
+                android:paddingRight="2dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clipToPadding="false"
+                android:layout_alignTop="@+id/tv_add_photo_and_video"
+                android:layout_alignStart="@+id/tv_add_photo_and_video"
+                android:layout_above="@+id/event_add_add">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="16dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_access_time_grey_500_24dp"/>
+
+            <Switch
+                android:id="@+id/switch_event_all_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全天活动    "
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
+                android:layout_alignBottom="@+id/imageView2"
+                android:layout_alignTop="@+id/imageView2"/>
+
+            <!--<Spinner-->
+            <!--android:id="@+id/all_day"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:textSize="16sp"-->
+            <!--android:layout_marginTop="12dp"-->
+            <!--android:layout_marginLeft="72dp"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:entries="@array/kind"></Spinner>-->
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/switch_event_all_day"
+                android:background="@android:color/transparent"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="72dp"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="right|center_vertical"
+                android:textSize="16sp"
+                android:layout_below="@+id/imageView2"
+                android:layout_alignParentEnd="true"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="16dp"/>
+
+            <TextView
+                android:id="@+id/tv_date2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_date"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="72dp"/>
+
+            <TextView
+                android:id="@+id/tv_time2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_time"
+                android:gravity="right|center_vertical"
+                android:background="@android:color/transparent"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="16dp"/>
+
+            <ImageView
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/tv_date2"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/divider_horizontal_bright"/>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/divider1"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="16dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_add_a_photo_grey_500_24dp"/>
+
+            <TextView
+                android:id="@+id/tv_add_photo_and_video"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/divider1"
+                android:hint="添加照片或视频"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="72dp"/>
+
+            <ImageView
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/imageView3"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/divider_horizontal_bright"/>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/divider2"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="16dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_place_grey_500_24dp"/>
+
+            <EditText
+                android:id="@+id/event_add_add"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@android:color/transparent"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:hint="添加地点"
+                android:layout_below="@+id/divider2"
+                android:layout_marginRight="16dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="72dp"/>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/divider3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0.7dp"-->
+                <!--android:layout_below="@+id/imageView4"-->
+                <!--android:layout_marginTop="12dp"-->
+                <!--android:background="@android:drawable/divider_horizontal_bright"/>-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/imageView5"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_below="@+id/divider3"-->
+                <!--android:layout_marginTop="12dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:scaleType="center"-->
+                <!--android:src="@drawable/ic_short_text_grey_500_24dp"/>-->
+
+            <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="64dp"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:textSize="16sp"-->
+                <!--android:hint="添加备注"-->
+                <!--android:layout_below="@+id/divider3"-->
+                <!--android:singleLine="true"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:layout_marginLeft="72dp"/>-->
+
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

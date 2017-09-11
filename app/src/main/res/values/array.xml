@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="kind">
+        <item>普通日程</item>
+        <item>全天日程</item>
+    </string-array>
+</resources>
